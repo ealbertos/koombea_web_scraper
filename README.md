@@ -37,7 +37,11 @@ rails db:migrate
 
 4. Start the servers:
 ```bash
-# In separate terminals
+# Preferre method
+bin/dev
+
+# If you want to run separate servers
+yarn build:css #Just the first time
 rails server
 bundle exec sidekiq
 ```
