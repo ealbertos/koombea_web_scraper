@@ -1,0 +1,11 @@
+<tr>
+  <td>
+    <%= link_to website.title.presence, website_path(website) %>
+  </td>
+  <td>
+    <%= website.total_links %>
+  </td>
+  <td><%= website.status.humanize %></td>
+</tr>
+
+

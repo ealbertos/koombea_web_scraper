@@ -1,0 +1,25 @@
+<%= form_for :session, url: session_path do |form| %>
+  <div class="mb-3">
+    <%= form.label :email, class: "form-label" %>
+    <%= form.email_field :email, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :password, class: "form-label" %>
+    <%= form.password_field :password, class: "form-control" %>
+  </div>
+
+  <div class="d-grid mb-3">
+    <%= form.submit t(".sign_in", default: "Log in"), class: "btn btn-primary" %>
+  </div>
+
+  <div class="d-flex justify-content-between">
+    <% if Clearance.configuration.allow_sign_up? %>
+      <%= link_to t(".sign_up", default: "Sign up"), sign_up_path, class: "link-secondary" %>
+    <% end %>
+    <% if Clearance.configuration.allow_password_reset? %>
+      <%= link_to t(".forgot_password", default: "Forgot your password?"), new_password_path, class: "link-secondary" %>
+    <% end %>
+  </div>
+<% end %>
+

@@ -1,0 +1,14 @@
+<%= form_with(model: @website, url: websites_path, local: true, class: "row g-3") do |f| %>
+  <div class="col-md-9">
+    <%= f.text_field :url, 
+      class: "form-control", 
+      placeholder: "Add new website" 
+    %>
+    <% if @website.errors[:url].any? %>
+      <div class="text-danger"><%= @website.errors[:url].first %></div>
+    <% end %>
+  </div>
+  <div class="col-md-3">
+    <%= f.submit "Scrape", class: "btn btn-primary w-100" %>
+  </div>
+<% end %>

@@ -1,0 +1,23 @@
+
+<div class="container min-vh-100 d-flex justify-content-center">
+  <div id="clearance" class="sign-up w-100" style="max-width: 400px;">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title text-center mb-4"><%= t(".title") %></h2>
+
+        <%= form_for @user do |form| %>
+          <%= render partial: '/users/form', object: form %>
+
+          <div class="d-grid mb-3">
+            <%= form.submit t(".sign_up", default: "Sign up"), class: "btn btn-primary" %>
+          </div>
+
+          <div class="text-center">
+            <%= link_to t(".sign_in"), sign_in_path, class: "link-secondary" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+

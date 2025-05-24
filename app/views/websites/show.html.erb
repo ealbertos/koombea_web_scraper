@@ -1,0 +1,45 @@
+<div class="container mt-4">
+  <h1><%= @website.title.presence %></h1>
+  
+  <%= link_to "← Back", root_path, class: "btn btn-outline-secondary mb-4" %>
+  
+  <div class="rowmb-4">
+    <div class="col-6">
+      <p><strong>URL:</strong> <%= link_to @website.url, @website.url, target: "_blank" %></p>
+    </div>
+    <div class="col-6">
+      <p><strong>Total links:</strong> <%= @website.total_links %></p>
+    </div>
+
+  </div>
+  
+  <h2>Links</h2>
+  
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>URL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @links.each do |link| %>
+          <tr>
+            <td><%= link.name %></td>
+            <td><%= link_to link.url, link.url, target: "_blank" %></td>
+          </tr>
+        <% end %>
+        
+        <% if @links.empty? %>
+          <tr>
+            <td colspan="2" class="text-center">No links were found in this website.</td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  
+  <%= paginate @links %>
+</div>
+
