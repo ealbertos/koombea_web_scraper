@@ -37,7 +37,7 @@ rails db:migrate
 
 4. Start the servers:
 ```bash
-# Preferre method
+# Preferred method
 bin/dev
 
 # If you want to run separate servers
