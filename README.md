@@ -19,7 +19,7 @@
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ealbertos/koombea_web_scrapper.git
+git clone https://github.com/ealbertos/koombea_web_scraper.git
 cd koombea_web_scrapper
 ```
 
