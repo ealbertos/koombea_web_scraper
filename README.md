@@ -40,7 +40,7 @@ rails db:migrate
 # Preferred method
 bin/dev
 
-# If you want to run separate servers
+# If you want to run separate terminals
 yarn build:css #Just the first time
 rails server
 bundle exec sidekiq
