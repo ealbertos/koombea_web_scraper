@@ -46,7 +46,7 @@ gem "cssbundling-rails"
 gem "clearance", "~> 2.6"
 
 # Background Jobs
-gem "sidekiq", "~> 7.2"
+gem "sidekiq", "~> 8.0"
 gem "redis", "~> 5.0"
 
 # Web Scraping
